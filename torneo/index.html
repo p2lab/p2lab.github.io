@@ -1,22 +1,173 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>Torneo Cookies - Pokémon Espada y Escudo</title>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
-        <title>Hello, world!</title>
+        <style>
+            html, body {
+                margin: 0;
+            }
+
+            body {
+                background-color: #fff99b;
+                font-family: 'Lato', sans-serif;
+            }
+
+            footer {
+                color: #7c6603;
+                text-align: center;
+                padding: 10px 0px;
+            }
+
+            h1 {
+                margin: 0;
+                padding: 0;
+                text-transform: uppercase;
+            }
+
+            a:link, a:visited, a:hover {
+                color: #7c6603;
+            }
+
+            h1 #text {
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                padding: 5px;
+            }
+
+            #participantes {
+                background: #fff99b url('bg.png');
+                text-align: center;
+                padding: 10px 0px;
+            }
+
+            #participantes h1 #text {
+                color: #cea900;
+                background: #fff;
+            }
+
+            .participante {
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                padding: 0px;
+                display: inline-block;
+                background: rgba(255, 255, 255, 0.5);
+                margin: 5px 0;
+            }
+
+            .name {
+                text-align: left;
+                padding: 10px 0 0 10px;
+            }
+
+            .section {
+                text-align: center;
+                padding: 10px 0px;
+                background: #fff;
+            }
+
+            .section h1 #text {
+                color: #fff;
+                background: #cea900;
+            }
+
+            .container {
+                margin: 10px 0px;
+
+            }
+
+            #reglas .container {
+                text-align: left;
+            }
+
+            .clear {
+                clear: both;
+            }
+        </style>
       </head>
     <body>
-        <h1>Hello, world!</h1>
+        <div id="participantes">
+            <h1>Torneo Cookies</h1>
+            <h1><span id="text">Participantes</span></h1>
+            <div class="container">
+                <div class="participante">
+                    <div class="name">Petros#2108</div>
+                    <div class="team"><img src="pokemon-gen8/regular/bulbasaur.png" /> <img src="pokemon-gen8/regular/charmander.png" /> <img src="pokemon-gen8/regular/squirtle.png" /> <img src="pokemon-gen8/regular/rowlet.png" /> <img src="pokemon-gen8/regular/zacian.png" /> <img src="pokemon-gen8/regular/popplio.png" /></div>
+                </div> 
+                <div class="participante">
+                    <div class="name">Petros#2108</div>
+                    <div class="team"><img src="pokemon-gen8/regular/bulbasaur.png" /> <img src="pokemon-gen8/regular/charmander.png" /> <img src="pokemon-gen8/regular/squirtle.png" /> <img src="pokemon-gen8/regular/rowlet.png" /> <img src="pokemon-gen8/regular/eternatus.png" /> <img src="pokemon-gen8/regular/popplio.png" /></div>
+                </div> 
+                <div class="participante">
+                    <div class="name">Petros#2108</div>
+                    <div class="team"><img src="pokemon-gen8/regular/bulbasaur.png" /> <img src="pokemon-gen8/regular/charmander.png" /> <img src="pokemon-gen8/regular/squirtle.png" /> <img src="pokemon-gen8/regular/rowlet.png" /> <img src="pokemon-gen8/regular/onix.png" /> <img src="pokemon-gen8/regular/popplio.png" /></div>
+                </div> 
+                <div class="participante">
+                    <div class="name">Petros#2108</div>
+                    <div class="team"><img src="pokemon-gen8/regular/bulbasaur.png" /> <img src="pokemon-gen8/regular/charmander.png" /> <img src="pokemon-gen8/regular/squirtle.png" /> <img src="pokemon-gen8/regular/rowlet.png" /> <img src="pokemon-gen8/regular/litten.png" /> <img src="pokemon-gen8/regular/popplio.png" /></div>
+                </div> 
+            </div>
+        </div>
+        <div id="reglas" class="section">
+            <h1><span id="text">Reglas</span></h1>
+            <div class="container">
+                <ul>
+                    <li>Este torneo es para las ediciones Pokémon Espada y Escudo, por lo que además de los juegos necesitarás una suscripción al servicio de Nintendo Switch Online.</li>
+                    <li>El formato de juego será VGC.</li>
+                    <li>Tu equipo <b>debe contener al menos un Pokémon de Hoenn</b>.</li>
+                    <li>No se puede tener más de un Pokémon con el mismo número de Pokédex Nacional.</li>
+                    <li>No se puede dormir a más de un Pokémon al mismo tiempo.</li>
+                    <li>Están prohibidos los movimientos de KO.</li>
+               </ul> 
+            </div>
+        </div>
+        <div id="clasificacion" class="section">
+            <h1><span id="text">Clasificación</span></h1>
+            <div class="container">
+                <iframe src="https://challonge.com/jx1x0e62/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+            </div>
+        </div>
+        <div id="premio" class="section">
+            <h1><span id="text">Premio</span></h1>
+            <div class="container">
+                <img src="jirachi.png" />
+                <table border="0" cellpadding="0" cellspacing="0" align="center">
+                    <tr>
+                        <td style="text-align: left;">
+                            <b>Pokémon</b>: Jirachi<br />
+                            <b>Nivel</b>: 100<br />
+                            <b>EO</b>: GF<br />
+                            <b>ID</b>: 04016<br /><br /><br />
+                            <b>Capturado en</b>: Gloria Ball<br />
+                            <b>Naturaleza</b>: Activa<br />
+                            <b>Habilidad</b>: Dicha
+                        </td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+                        <td style="text-align: left;" valign="top">
+                            <b>Movimientos</b>:<br />
+                            Deseo<br />
+                            Confusión<br />
+                            Descanso<br />
+                            -<br /><br />
+                            <b>Otros datos</b>:<br />
+                            Cintas: Clásica<br />
+                            IVs: 31/x/31/x/x/31
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <footer>
+            Diseñado y desarrollado por Petros &copy; 2020<br />Torneo para el <a href="https://discord.gg/xQkqVY" target="_blank">servidor de Discord de MikaCookies</a>.
+        </footer>
     </body>
 </html>
