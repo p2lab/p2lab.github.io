@@ -14,8 +14,16 @@
             }
 
             body {
-                background-color: #fff99b;
+                background: #fff99b;
                 font-family: 'Lato', sans-serif;
+            }
+
+            nav {
+                position: fixed;
+                background: #fff99b;
+                border-bottom: 1px solid #7c6603;
+                width: 100%;
+                height: 25px;
             }
 
             footer {
@@ -93,37 +101,68 @@
         </style>
       </head>
     <body>
+        <nav>
+            <a href="#participantes">Participantes</a> | <a href="#reglas">Reglas</a> <!-- | <a href="#clasificacion">Clasificación</a> --> | <a href="#premio">Premio</a>
+        </nav>
+        <div style="height:25px;">&nbsp;</div>
         <div id="participantes">
-            <h1>Torneo Cookies</h1>
-            <h1><span id="text">Participantes</span></h1>
+            <img src="pkmn_esp_esc.png" />
+            <h2>Fecha: <i>Por determinar</i></h2>
+            <h1><span id="text">Participantes (5)</span></h1>
             <div class="container">
-                Aún no hay participantes
                 <!-- <div class="participante">
                     <div class="name">Petros#2108</div>
                     <div class="team"><img src="pokemon-gen8/regular/bulbasaur.png" /> <img src="pokemon-gen8/regular/charmander.png" /> <img src="pokemon-gen8/regular/squirtle.png" /> <img src="pokemon-gen8/regular/rowlet.png" /> <img src="pokemon-gen8/regular/zacian.png" /> <img src="pokemon-gen8/regular/popplio.png" /></div>
                 </div> -->
+                <div class="participante">
+                    <div class="name">Piñita#1703</div>
+                    <div class="team"><img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /></div>
+                </div>
+                <div class="participante">
+                    <div class="name">aranray#4968</div>
+                    <div class="team"><img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /></div>
+                </div>
+                <div class="participante">
+                    <div class="name">TheOtaku (≧ω≦) Nerf this!#7674</div>
+                    <div class="team"><img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /></div>
+                </div>
+                <div class="participante">
+                    <div class="name">Alvaro4408#5939</div>
+                    <div class="team"><img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /></div>
+                </div>
+                <div class="participante">
+                    <div class="name">Hoopa#6987</div>
+                    <div class="team"><img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /> <img src="pokemon-gen8/unknown-gen5.png" /></div>
+                </div>
             </div>
         </div>
         <div id="reglas" class="section">
             <h1><span id="text">Reglas</span></h1>
             <div class="container">
                 <ul>
-                    <li>Este torneo es para las ediciones Pokémon Espada y Escudo, por lo que además de los juegos necesitarás una suscripción al servicio de Nintendo Switch Online.</li>
-                    <li>El formato de juego será VGC.</li>
-                    <li>Tu equipo <b>debe contener al menos un Pokémon de Hoenn</b>.</li>
-                    <li>No se puede tener más de un Pokémon con el mismo número de Pokédex Nacional.</li>
-                    <li>No se puede dormir a más de un Pokémon al mismo tiempo.</li>
-                    <li>Están prohibidos los movimientos de KO.</li>
+                    <li>Para apuntarte, comunícalo a través del canal #competitivo de Discord. Además, debes decir el equipo con el que combatirás (solo los nombres de los Pokémon).</li>
+                    <li>Puedes hacer tantos cambios como quieras (en tu equipo) antes de que comience el torneo. Una vez empiece, el equipo debe permanecer inalterado.</li>
+                    <li>Este torneo es para las ediciones Pokémon Espada y Escudo, por lo que necesitarás una suscripción a Nintendo Switch Online para participar.</li>
+                    <li>El formato de juego será <a href="https://www.smogon.com/dex/ss/formats/ou/" target="_blank">singles OU</a>.</li>
+                    <ul>
+                        <li>No se puede tener más de un Pokémon con el mismo número de Pokédex Nacional.</li>
+                        <li>No se puede dormir a más de un Pokémon al mismo tiempo.</li>
+                        <li>Están prohibidos los movimientos OHKO (Fisura, Guillotina, Perforador, Frío Polar).</li>
+                        <li>No se puede usar un Pokémon con las habilidades Veleta o Sombra Trampa.</li>
+                        <li>No se puede usar Doble Equipo, Reducción ni Relevo.</li>
+                        <li>No se pueden usar Pokémon <a href="https://www.smogon.com/dex/ss/tags/uber" target="_blank">Uber</a>.</li>
+                        <li>No se puede usar Dinamax/Gigamax.</li>
+                    </ul>
                     <li>El resultado de un enfrentamiento se decidirá al mejor de tres.</li>
                     <li>Los dos usuarios que se enfrenten deben confirmar el resultado, o bien aportar un vídeo usando la función de grabación de Switch donde se vea el resultado.</li>
-                    <li>Esta página es meramente informativa, todo se gestionará desde el canal #competitivo del servidor de MikaCookies.</li>
+                    <li>Esta página es meramente informativa, todo se gestionará desde el canal #competitivo del servidor de MikaCookies. Para apuntarte o comunicar los resultados, por favor, hazlo allí.</li>
                </ul> 
             </div>
         </div>
         <div id="clasificacion" class="section" style="display: none;">
             <h1><span id="text">Clasificación</span></h1>
             <div class="container">
-                
+                <i>Próximamente...</i>
             </div>
         </div>
         <div id="premio" class="section">
@@ -159,7 +198,7 @@
             </div>
         </div>
         <footer>
-            Diseñado y desarrollado por Petros &copy; 2020<br />Torneo para el <a href="https://discord.gg/xQkqVY" target="_blank">servidor de Discord de MikaCookies</a>.
+            Diseñado y desarrollado por Petros &copy; 2020<br />Torneo para el <a href="https://www.discord.gg/MikaCookies" target="_blank">servidor de Discord de MikaCookies</a>.
         </footer>
     </body>
 </html>
