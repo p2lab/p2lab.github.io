@@ -1,33 +1,106 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pokémon ROZA Teamlocke</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pokémon ROZA Teamlocke</title>
 
-    <!-- ICON -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-    <link rel="manifest" href="./site.webmanifest">
-    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <!-- /ICON -->
+        <!-- ICON -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+        <link rel="manifest" href="./site.webmanifest">
+        <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <!-- /ICON -->
 
-    <link rel="stylesheet" href="./css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  </head>
-  <body>
-    <section class="section">
-      <div class="container">
-        <h1 class="title">
-          Hello World
-        </h1>
-        <p class="subtitle">
-          My first website with <strong>Bulma</strong>!
-        </p>
-      </div>
-    </section>
-  </body>
+        <link rel="stylesheet" href="./css/bulma.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+        <style type="text/css">
+            .logo-bg {
+                background: url('./images/bg.jpg') center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="has-text-centered logo-bg">
+            <p class="is-hidden-touch"><img src="./images/logo500w219h.png"></p>
+            <p class="is-hidden-desktop"><img src="./images/logo300w131h2.png"></p>
+        </div>
+        <header>
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="index.html">
+                        <img src="./favicon-32x32.png" alt="Pokémon ROZA Teamlocke logo">
+                    </a>
+
+                    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div class="navbar-menu" id="navMenu">
+                    <div class="navbar-start">
+                        <a href="/insects" class="navbar-item has-text-weight-bold">Reglas</a>
+                        <a href="/fish" class="navbar-item has-text-weight-bold">Participantes</a>
+                        <a href="/fish" class="navbar-item has-text-weight-bold">Puntos</a>
+                        <a href="/fish" class="navbar-item has-text-weight-bold">Enfrentamientos</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section class="section">
+            <h3 class="title is-3 has-text-centered">El desafío más exigente</h3>
+            <div class="content is-size-5">
+                <p>7 de abril de 2020</p>
+
+                <p>El <span class="has-text-danger">Equipo Magma</span> y el <span class="has-text-info">Equipo Aqua</span> están buscando nuevos reclutas para ampliar sus tropas y así poder llevar a cabo sus malvados planes. No obstante, si tienes interés en probar suerte, debes saber que será necesario superar una serie de retos que pondrán a prueba tu valía como soldado <span class="has-text-danger">Magma</span>/<span class="has-text-info">Aqua</span>.</p>
+
+                <p>P. D.: La información aquí presente es confidencial. Mantener fuera del alcance del Cuerpo de Seguridad de Hoenn.</p>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="content has-text-centered has-text-weight-bold">
+                <p>Diseñado y desarrollado por Petros.</p>
+            </div>
+
+            <div class="content has-text-centered">
+            <a href="twitter.com/klektron">Mi Twitter @klektron</a>
+            <span>|</span>
+            <a href="https://www.discord.gg/MikaCookies">Discord de MikaCookies</a>
+            </div>
+        </footer>
+
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', () => {
+
+                // Get all "navbar-burger" elements
+                const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+                // Check if there are any navbar burgers
+                if ($navbarBurgers.length > 0) {
+                    // Add a click event on each of them
+                    $navbarBurgers.forEach( el => {
+                    el.addEventListener('click', () => {
+
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                    });
+                    });
+                }
+
+            });
+
+        </script>
+    </body>
 </html>
