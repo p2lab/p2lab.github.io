@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Pokémon ROZA Teamlocke</title>
+        <title>Reglas y funcionamiento</title>
 
         <!-- ICON -->
         <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
@@ -34,6 +34,10 @@
             section a:hover, footer a:hover {
                 color: #4a4a4a;
             }
+
+            ol { counter-reset: item }
+            li{ display: block }
+            li:before { content: counters(item, ".") " "; counter-increment: item }
         </style>
     </head>
     <body>
@@ -68,19 +72,49 @@
         </header>
 
         <section class="section">
-            <h3 class="title is-3 has-text-centered">El desafío más exigente</h3>
+            <h3 class="title is-3 has-text-centered">Reglas</h3>
             <div class="content is-size-5">
-                <p>El <span class="has-text-danger">Equipo Magma</span> y el <span class="has-text-info">Equipo Aqua</span> están buscando nuevos reclutas para ampliar sus tropas y así poder llevar a cabo sus malvados planes. No obstante, si tienes interés en probar suerte, debes saber que será necesario superar una serie de retos que pondrán a prueba tus cualidades como entrenador Pokémon.</p>
+                <p>Para que el desafío sea interesante, los aspirantes estarán sujetos a una serie de normas que deben cumplir. La comprobación del cumplimiento de algunas de estas reglas no es posible por parte del organizador del torneo, por lo que se espera que el aspirante cumpla su parte siendo honesto y legal en todo momento. No hay un premio para el vencedor de este desafío, por lo que mentir no hará que consigas nada más que quedar primero en la clasificación de manera deshonrada. Dicho esto, las normas son:</p>
 
-                <p><span class="has-text-danger">Magno</span> y <span class="has-text-info">Aquiles</span> se encuentran preparando su próximo golpe, y para ello necesitarán la ayuda de nuevos integrantes en sus respectivos equipos. En concreto, se buscan un total de <span class="has-text-danger">cuatro reclutas Magma</span> y <span class="has-text-info">cuatro reclutas Aqua</span>.</p>
+                <ol>
+                    <li>
+                        <b>Sobre los Pokémon salvajes:</b>
+                        <ol>
+                            <li>Solo puedes atrapar al primer Pokémon que encuentres en una nueva ruta (ruta que visitas por primera vez. Esto incluye cuevas, bosques, etc.).</li>
+                            <li>Si huyes del combate contra ese Pokémon o lo debilitas, no podrás atrapar ninguno en esa ruta.</li>
+                        </ol>
+                    </li>
 
-                <p>Tu misión como aspirante a recluta será evitar que <span class="has-text-danger">Magno</span> se haga con el control de <span class="has-text-danger">Groudon</span> (si eres del <span class="has-text-info">Equipo Aqua</span>) o evitar que <span class="has-text-info">Aquiles</span> consiga el poder de <span class="has-text-info">Kyogre</span> (si eres del <span class="has-text-danger">Equipo Magma</span>). Para ello, iniciarás tu aventura en Villa Raíz y te harás pasar por un Entrenador Pokémon que quiere obtener las ocho medallas de gimnasio de la región de Hoenn. Sin embargo, eso es solo una tapadera que servirá para ocultar tus verdaderas intenciones: interferir en los planes del Equipo enemigo.</p>
+                    <li>
+                        <b>Sobre la vida (PS/HP) de tus Pokémon:</b>
+                        <ol>
+                            <li>Si un Pokémon de tu equipo es debilitado en combate, se considera que ha muerto y no puedes volver a utilizarlo. Debes dejarlo apartado en una Caja del PC.</li>
+                            <li>Puedes acudir a un Centro Pokémon a curar a tus Pokémon tantas veces como quieras (siempre que sus PS no sean 0, de acuerdo con la norma anterior), pero no podrás comprar ningún objeto que restaure la vida de tu Pokémon.</li>
+                            <li>Sí podrás usar objetos curativos que encuentres durante la aventura.</li>
+                        </ol>
+                    </li>
 
-                <p>Debido a que las actividades de estos dos Equipos son altamente cuestionables para la justicia, será necesario que la comunicación entre los reclutas se establezca a través de la sala <span class="has-text-success has-text-weight-bold">#discusion</span> en el servidor de Discord MikaCookies. Así el Cuerpo de Seguridad de Hoenn (CSH) no podrá fisgonear en asuntos que no le incumben.</p>
+                    <li>
+                        <b>Sobre el nivel tus Pokémon:</b>
+                        <ol>
+                            <li>Ninguno de los Pokémon de tu equipo deben superar NUNCA en nivel al del Pokémon más fuerte del próximo líder al que te vayas a enfrentar. <i>Ejemplo: el Pokémon más fuerte de Petra es un Nosepass a nivel 14. Tus Pokémon podrán estar, como máximo, al nivel 13.</i></li>
+                            <li>Si tienes Pokémon que superen el nivel del Pokémon más fuerte del próximo líder, debes dejarlo en el PC temporalmente hasta que superes al líder.</li>
+                            <li>Si tu Pokémon sube de nivel durante el combate contra el líder, igualando o superando el nivel del Pokémon más fuerte, puedes continuar usándolo sin ningún inconveniente.</li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+            <h3 class="title is-3 has-text-centered">Funcionamiento</h3>
+            <div class="content is-size-5">
+                <p>De forma obligatoria, se requiere que el aspirante a recluta cumpla lo siguiente:</p>
 
-                <p>¿Qué me dices? ¿Te apuntas? No olvides que es de vital importancia que leas las secciones <a href="./como-participar.html">¿Cómo participar?</a> y <a href="./reglas-y-funcionamiento.html">Reglas y funcionamiento</a> para poder formar parte de este desafío.</p>
-
-                <p>P. D.: La información aquí presente es confidencial. Mantener fuera del alcance del CSH.</p>
+                <ul>
+                    <li>Debes ser miembro del <a href="https://www.discord.gg/MikaCookies" target="_blank">servidor de Discord MikaCookies</a> y tener, al menos, el rango Poke Cookie.</li>
+                    <li>Debes poseer una Nintendo 3DS y uno de los juegos: Pokémon <span class="has-text-danger">Rubí Omega</span> o <span class="has-text-info">Zafiro Alfa</span>.</li>
+                    <li>Debes estar dispuesto a empezar una nueva partida en tu juego para poder formar parte de este desafío.</li>
+                    <li>Debes tener conexión a internet para poder participar en combates e intercambios <i>online</i>.</li>
+                    <li>Debes comprometerte con el desafío si resultas seleccionado. Lee bien la sección <a href="./reglas-y-funcionamiento.html">Reglas y funcionamiento</a> y considera si podrás dedicarle el tiempo suficiente.
+                </ul>
             </div>
             <div class="content is-size-6">
                 <!-- ultima actualizacion -->
