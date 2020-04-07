@@ -16,28 +16,29 @@
         <!-- /ICON -->
 
         <link rel="stylesheet" href="./css/bulma.min.css">
+        <link rel="stylesheet" href="./css/site.css">
         <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
         <style type="text/css">
-            .logo-bg {
-                background: url('./images/bg.jpg') center;
+            ol {
+                counter-reset: item;
             }
 
-            section a:link, section a:visited, footer a:link, footer a:visited {
-                color: #9b6c17;
+            ol > li {
+                counter-increment: item;
             }
 
-            section a:link, section a:visited {
-                text-decoration: underline;
+            ol ol > li {
+                display: block;
             }
 
-            section a:hover, footer a:hover {
-                color: #4a4a4a;
+            ol ol > li:before {
+                content: counters(item, ".") ". ";
+                background: #4a4a4a;
+                color: white;
+                border-radius: 3px;
+                margin-right: 5px;
             }
-
-            ol { counter-reset: item }
-            li{ display: block }
-            li:before { content: counters(item, ".") " "; counter-increment: item }
         </style>
     </head>
     <body>
@@ -73,7 +74,7 @@
 
         <section class="section">
             <h3 class="title is-3 has-text-centered">Reglas</h3>
-            <div class="content is-size-5">
+            <div class="content is-size-6">
                 <p>Para que el desafío sea interesante, los aspirantes estarán sujetos a una serie de normas que deben cumplir. La comprobación del cumplimiento de algunas de estas reglas no es posible por parte del organizador del torneo, por lo que se espera que el aspirante cumpla su parte siendo honesto y legal en todo momento. No hay un premio para el vencedor de este desafío, por lo que mentir no hará que consigas nada más que quedar primero en la clasificación de manera deshonrada. Dicho esto, las normas son:</p>
 
                 <ol>
@@ -82,6 +83,7 @@
                         <ol>
                             <li>Solo puedes atrapar al primer Pokémon que encuentres en una nueva ruta (ruta que visitas por primera vez. Esto incluye cuevas, bosques, etc.).</li>
                             <li>Si huyes del combate contra ese Pokémon o lo debilitas, no podrás atrapar ninguno en esa ruta.</li>
+                            <li>No está permitido el uso de Pokémon legendarios (puedes capturarlo, pero tendrás que depositarlo en el PC).</li>
                         </ol>
                     </li>
 
@@ -102,19 +104,22 @@
                             <li>Si tu Pokémon sube de nivel durante el combate contra el líder, igualando o superando el nivel del Pokémon más fuerte, puedes continuar usándolo sin ningún inconveniente.</li>
                         </ol>
                     </li>
+
+
+                    <li>
+                        <b>Sobre los intercambios <i>online</i>:</b>
+                        <ol>
+                            <li>Los miembros de un mismo Equipo, tenéis permitido intercambiar Pokémon entre vosotros (deben ser Pokémon que habéis conseguido siguiendo las reglas del apartado 1) de forma totalmente libre.</li>
+                            <li>No puedes recibir Pokémon de miembros del Equipo rival o de personas ajenas al Teamlocke.</li>
+                        </ol>
+                    </li>
                 </ol>
             </div>
             <h3 class="title is-3 has-text-centered">Funcionamiento</h3>
-            <div class="content is-size-5">
-                <p>De forma obligatoria, se requiere que el aspirante a recluta cumpla lo siguiente:</p>
+            <div class="content is-size-6">
+                <p>En este desafío tendrás dos objetivos: uno individual y otro grupal. Son independientes entre sí, por lo que puedes lograr los dos, solo uno o ninguno. Solo una persona de los ocho participantes puede lograr el objetivo individual, y solo uno de los dos Equipos puede lograr el objetivo grupal.</p>
 
-                <ul>
-                    <li>Debes ser miembro del <a href="https://www.discord.gg/MikaCookies" target="_blank">servidor de Discord MikaCookies</a> y tener, al menos, el rango Poke Cookie.</li>
-                    <li>Debes poseer una Nintendo 3DS y uno de los juegos: Pokémon <span class="has-text-danger">Rubí Omega</span> o <span class="has-text-info">Zafiro Alfa</span>.</li>
-                    <li>Debes estar dispuesto a empezar una nueva partida en tu juego para poder formar parte de este desafío.</li>
-                    <li>Debes tener conexión a internet para poder participar en combates e intercambios <i>online</i>.</li>
-                    <li>Debes comprometerte con el desafío si resultas seleccionado. Lee bien la sección <a href="./reglas-y-funcionamiento.html">Reglas y funcionamiento</a> y considera si podrás dedicarle el tiempo suficiente.
-                </ul>
+                <p>La forma de medir el éxito será mediante un sistema de puntos. Al final del Teamlocke, el jugador con más puntos individuales logrará el título de Comandante en su correspondiente Equipo; del mismo modo, el Equipo con mayor cantidad de puntos grupales será nombrado Equipo vencedor.</p>
             </div>
             <div class="content is-size-6">
                 <!-- ultima actualizacion -->

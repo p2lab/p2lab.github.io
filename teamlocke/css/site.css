@@ -1,0 +1,15 @@
+.logo-bg {
+    background: url('../images/bg.jpg') center;
+}
+
+section a:link, section a:visited, footer a:link, footer a:visited {
+    color: #9b6c17;
+}
+
+section a:link, section a:visited {
+    text-decoration: underline;
+}
+
+section a:hover, footer a:hover {
+    color: #4a4a4a;
+}
