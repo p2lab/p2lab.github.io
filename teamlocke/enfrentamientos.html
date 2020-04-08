@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Enfrentamientos</title>
+
+        <!-- ICON -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+        <link rel="manifest" href="./site.webmanifest">
+        <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <!-- /ICON -->
+
+        <link rel="stylesheet" href="./css/bulma.min.css">
+        <link rel="stylesheet" href="./css/site.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    </head>
+    <body>
+        <div class="has-text-centered logo-bg">
+            <p class="is-hidden-touch"><img src="./images/logo500w219h.png"></p>
+            <p class="is-hidden-desktop"><img src="./images/logo300w131h2.png"></p>
+        </div>
+        <header>
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="index.html">
+                        <img src="./images/icon.png" alt="Pokémon ROZA Teamlocke logo">
+                    </a>
+
+                    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div class="navbar-menu" id="navMenu">
+                    <div class="navbar-start">
+                        <a href="./como-participar.html" class="navbar-item has-text-weight-bold">¿Cómo participo?</a>
+                        <a href="./reglas-y-funcionamiento.html" class="navbar-item has-text-weight-bold">Reglas y funcionamiento</a>
+                        <a href="./participantes.html" class="navbar-item has-text-weight-bold">Participantes</a>
+                        <a href="./puntos.html" class="navbar-item has-text-weight-bold">Puntos</a>
+                        <a href="./enfrentamientos.html" class="navbar-item has-text-weight-bold">Enfrentamientos</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section class="section">
+            <h3 class="title is-3 has-text-centered">Enfrentamientos</h3>
+            <div class="content is-size-6">
+                <p>Cada vez que derrotes a un líder, te tocará enfrentarte contra un rival del Equipo contrario. A continuación podrás ver quién es tu adversario y los resultados de dicho combate una vez se realice.</p>
+
+                <!--<h4 class="title is-4 has-text-left"><img src="./images/Wallace_OD.png"> Plubio (8vo líder)</h4>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM1] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA4] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM2] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA1] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM3] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA2] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM4] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA3] ?????
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 class="title is-4 has-text-left"><img src="./images/Tate_OD.png"><img src="./images/Liza_OD.png"> Vito y Leti (7mo líder)</h4>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM1] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA3] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM2] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA4] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM3] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA1] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM4] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA2] ?????
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 class="title is-4 has-text-left"><img src="./images/Winona_OD.png"> Alana (6to líder)</h4>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM1] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA2] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM2] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA3] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM3] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA4] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM4] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA1] ?????
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 class="title is-4 has-text-left"><img src="./images/Norman_OD.png"> Norman (5to líder)</h4>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM1] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA1] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM2] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA2] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM3] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA3] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM4] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA4] ?????
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 class="title is-4 has-text-left"><img src="./images/Flannery_OD.png"> Candela (4to líder)</h4>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM1] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA4] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM2] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA1] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM3] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA2] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM4] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA3] ?????
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 class="title is-4 has-text-left"><img src="./images/Wattson_OD.png"> Erico (3er líder)</h4>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM1] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA3] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM2] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA4] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM3] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA1] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM4] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA2] ?????
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 class="title is-4 has-text-left"><img src="./images/Brawly_OD.png"> Marcial (2do líder)</h4>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM1] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA2] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM2] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA3] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM3] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA4] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM4] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA1] ?????
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 class="title is-4 has-text-left"><img src="./images/Roxanne_OD.png"> Petra (1er líder)</h4>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM1] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA1] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM2] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA2] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM3] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA3] ?????
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="has-text-centered">
+                                [EM4] ?????
+                            </td>
+                            <td class="has-text-centered">
+                                VS
+                            </td>
+                            <td class="has-text-centered">
+                                [EA4] ?????
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>-->
+                <p><i>Aún no hay enfrentamientos.</i></p>
+            </div>
+            <div class="content is-size-6">
+                <!-- ultima actualizacion -->
+                <p class="has-text-right">8 de abril de 2020</p>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="content has-text-centered has-text-weight-bold">
+                <p>Diseñado y desarrollado por Petros.</p>
+            </div>
+            <div class="content has-text-centered">
+                <img src="./images/groudonp.png"> <img src="./images/kyogrep.png">
+            </div>
+            <div class="content has-text-centered">
+                <a href="twitter.com/klektron" target="_blank">Mi Twitter @klektron</a>
+                <span>|</span>
+                <a href="https://www.discord.gg/MikaCookies" target="_blank">Discord de MikaCookies</a>
+            </div>
+        </footer>
+
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', () => {
+
+                // Get all "navbar-burger" elements
+                const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+                // Check if there are any navbar burgers
+                if ($navbarBurgers.length > 0) {
+                    // Add a click event on each of them
+                    $navbarBurgers.forEach( el => {
+                    el.addEventListener('click', () => {
+
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                    });
+                    });
+                }
+
+            });
+
+        </script>
+    </body>
+</html>
