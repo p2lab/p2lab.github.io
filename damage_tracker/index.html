@@ -137,10 +137,22 @@
 			.d-hidden {
 				display: none;
 			}
+
+			.f-left {
+				float: left;
+			}
+
+			.mx-10 {
+				padding: 0 10px;
+			}
+
+			.c-both {
+				clear: both;
+			}
 		</style>
 	</head>
 	<body class="bg-green-1" onload="checkCookies()">
-		<div class="w-100perc"><button class="status-button p-10" onclick="resetCookies()">Resetear</button></div>
+		<div class="f-left"><button class="status-button p-10" onclick="resetCookies(false)">Resetear todo</button></div> <div class="f-left mx-10"><button class="status-button p-10" onclick="resetCookies(true)">Resetear solo activo</button></div><div class="c-both"></div>
 		<div id="active-p" style="overflow-x: auto;">
 			<p class="t-center t-blue-2 t-bold t-large">Activo</p>
 			<table border="0" class="w-100perc tb-center">
@@ -290,6 +302,7 @@
 						if (activeAsleep) {
 							document.getElementById(button_id).style.backgroundColor = green_2;
 							document.getElementById(button_id).style.color = white_0;
+							setCookie("asleep_b", "yes", 365);
 							activeAsleep = false;
 						}
 						else {
@@ -303,6 +316,7 @@
 						if (activeBurned) {
 							document.getElementById(button_id).style.backgroundColor = green_2;
 							document.getElementById(button_id).style.color = white_0;
+							setCookie("burned_b", "no", 365);
 							activeBurned = false;
 						}
 						else {
@@ -316,6 +330,7 @@
 						if (activeConfused) {
 							document.getElementById(button_id).style.backgroundColor = green_2;
 							document.getElementById(button_id).style.color = white_0;
+							setCookie("confused_b", "no", 365);
 							activeConfused = false;
 						}
 						else {
@@ -329,6 +344,7 @@
 						if (activeParalyzed) {
 							document.getElementById(button_id).style.backgroundColor = green_2;
 							document.getElementById(button_id).style.color = white_0;
+							setCookie("paralyzed_b", "no", 365);
 							activeParalyzed = false;
 						}
 						else {
@@ -342,6 +358,7 @@
 						if (activePoisoned) {
 							document.getElementById(button_id).style.backgroundColor = green_2;
 							document.getElementById(button_id).style.color = white_0;
+							setCookie("poisoned_b", "no", 365);
 							activePoisoned = false;
 						}
 						else {
@@ -480,13 +497,16 @@
 				}
 			}
 
-			function resetCookies() {
+			function resetCookies(only_active) {
 				document.getElementById('active_0').textContent = 0;
-				document.getElementById('bench_0').textContent = 0;
-				document.getElementById('bench_1').textContent = 0;
-				document.getElementById('bench_2').textContent = 0;
-				document.getElementById('bench_3').textContent = 0;
-				document.getElementById('bench_4').textContent = 0;				
+
+				if (!only_active) {
+					document.getElementById('bench_0').textContent = 0;
+					document.getElementById('bench_1').textContent = 0;
+					document.getElementById('bench_2').textContent = 0;
+					document.getElementById('bench_3').textContent = 0;
+					document.getElementById('bench_4').textContent = 0;
+				}
 
 				activeAsleep = false;
 				showStatusButton("asleep_b");
@@ -498,13 +518,16 @@
 				showStatusButton("paralyzed_b");
 				activePoisoned = false;
 				showStatusButton("poisoned_b");
-				
+
 				setCookie("active_0", "0", 0);
-				setCookie("bench_0", "0", 0);
-				setCookie("bench_1", "0", 0);
-				setCookie("bench_2", "0", 0);
-				setCookie("bench_3", "0", 0);
-				setCookie("bench_4", "0", 0);
+
+				if (!only_active) {
+					setCookie("bench_0", "0", 0);
+					setCookie("bench_1", "0", 0);
+					setCookie("bench_2", "0", 0);
+					setCookie("bench_3", "0", 0);
+					setCookie("bench_4", "0", 0);
+				}
 
 				setCookie("asleep_b", "no", 0);
 				setCookie("burned_b", "no", 0);
