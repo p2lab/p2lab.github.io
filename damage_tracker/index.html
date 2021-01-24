@@ -197,7 +197,7 @@
 							<tr><td><div id="select_1" class="w-100perc h-100perc d-hidden"><button class="w-100perc h-100perc select-op-button" onclick="switchActive('bench_1')">SELECT</button></td></tr>
 							<tr><td><div class="w-100perc h-100perc"><button class="w-100perc h-100perc dmg-op-button" onclick="changeCounter('+', 'bench_1')">+</button></td></tr>
 							<tr><td><div class="t-center t-large"><div id="bench_1">0</div></div></td></tr>
-							<tr><td><div class="w-100perc h-100perc"><button class="w-100perc h-100perc dmg-op-button" onclick="changeCounter('+', 'bench_1')">-</button></td></tr>
+							<tr><td><div class="w-100perc h-100perc"><button class="w-100perc h-100perc dmg-op-button" onclick="changeCounter('-', 'bench_1')">-</button></td></tr>
 						</table>
 					</td>
 					<td class="counter t-center w-20perc">
@@ -205,7 +205,7 @@
 							<tr><td><div id="select_2" class="w-100perc h-100perc d-hidden"><button class="w-100perc h-100perc select-op-button" onclick="switchActive('bench_2')">SELECT</button></td></tr>
 							<tr><td><div class="w-100perc h-100perc"><button class="w-100perc h-100perc dmg-op-button" onclick="changeCounter('+', 'bench_2')">+</button></td></tr>
 							<tr><td><div class="t-center t-large"><div id="bench_2">0</div></div></td></tr>
-							<tr><td><div class="w-100perc h-100perc"><button class="w-100perc h-100perc dmg-op-button" onclick="changeCounter('+', 'bench_2')">-</button></td></tr>
+							<tr><td><div class="w-100perc h-100perc"><button class="w-100perc h-100perc dmg-op-button" onclick="changeCounter('-', 'bench_2')">-</button></td></tr>
 						</table>
 					</td>
 					<td class="counter t-center w-20perc">
@@ -213,7 +213,7 @@
 							<tr><td><div id="select_3" class="w-100perc h-100perc d-hidden"><button class="w-100perc h-100perc select-op-button" onclick="switchActive('bench_3')">SELECT</button></td></tr>
 							<tr><td><div class="w-100perc h-100perc"><button class="w-100perc h-100perc dmg-op-button" onclick="changeCounter('+', 'bench_3')">+</button></td></tr>
 							<tr><td><div class="t-center t-large"><div id="bench_3">0</div></div></td></tr>
-							<tr><td><div class="w-100perc h-100perc"><button class="w-100perc h-100perc dmg-op-button" onclick="changeCounter('+', 'bench_3')">-</button></td></tr>
+							<tr><td><div class="w-100perc h-100perc"><button class="w-100perc h-100perc dmg-op-button" onclick="changeCounter('-', 'bench_3')">-</button></td></tr>
 						</table>
 					</td>
 					<td class="counter t-center w-20perc">
@@ -221,7 +221,7 @@
 							<tr><td><div id="select_4" class="w-100perc h-100perc d-hidden"><button class="w-100perc h-100perc select-op-button" onclick="switchActive('bench_4')">SELECT</button></td></tr>
 							<tr><td><div class="w-100perc h-100perc"><button class="w-100perc h-100perc dmg-op-button" onclick="changeCounter('+', 'bench_4')">+</button></td></tr>
 							<tr><td><div class="t-center t-large"><div id="bench_4">0</div></div></td></tr>
-							<tr><td><div class="w-100perc h-100perc"><button class="w-100perc h-100perc dmg-op-button" onclick="changeCounter('+', 'bench_4')">-</button></td></tr>
+							<tr><td><div class="w-100perc h-100perc"><button class="w-100perc h-100perc dmg-op-button" onclick="changeCounter('-', 'bench_4')">-</button></td></tr>
 						</table>
 					</td>
 				</tr>
@@ -383,7 +383,12 @@
 					final_val = val + 10;
 				}
 				else {
-					final_val = val - 10;
+					if (val-10 < 0) {
+						final_val = 0;
+					}
+					else {
+						final_val = val - 10;
+					}
 				}
 
 				setCookie(cnt_id, final_val, 365);
