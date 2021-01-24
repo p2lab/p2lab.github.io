@@ -415,6 +415,12 @@
 				showStatusButton("paralyzed_b");
 				activePoisoned = false;
 				showStatusButton("poisoned_b");
+				
+				setCookie("asleep_b", "no", 365);
+				setCookie("burned_b", "no", 365);
+				setCookie("confused_b", "no", 365);
+				setCookie("paralyzed_b", "no", 365);
+				setCookie("poisoned_b", "no", 365);
 
 				showSelectButton();
 			}
