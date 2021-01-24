@@ -130,19 +130,23 @@
 				padding: 0 10px;
 			}
 
+			.p-10 {
+				padding: 10px;
+			}
+
 			.d-hidden {
 				display: none;
 			}
 		</style>
 	</head>
 	<body class="bg-green-1" onload="checkCookies()">
-		<div class="w-100perc"><a href="#" onclick="resetCookies()">Reset</a></div>
+		<div class="w-100perc"><button class="status-button p-10" onclick="resetCookies()">Resetear</button></div>
 		<div id="active-p" style="overflow-x: auto;">
-			<p class="t-center t-blue-2 t-bold t-large">Active</p>
+			<p class="t-center t-blue-2 t-bold t-large">Activo</p>
 			<table border="0" class="w-100perc tb-center">
 				<tr>
 					<td rowspan="3" class="w-20perc"></td>
-					<td class="w-20perc"><div class="w-100perc h-100perc"><button id="asleep_b" class="w-100perc h-100perc status-button" onclick="showStatusButton('asleep_b')">Asleep</button></div></td>
+					<td class="w-20perc"><div class="w-100perc h-100perc"><button id="asleep_b" class="w-100perc h-100perc status-button" onclick="showStatusButton('asleep_b')">Dormido</button></div></td>
 					<td rowspan="3" class="w-20perc counter t-center">
 						<table class="w-100perc">
 							<tr><td><div class="w-100perc h-100perc"><button class="w-100perc h-100perc dmg-op-button" onclick="changeCounter('+', 'active_0')">+</button></td></tr>
@@ -150,22 +154,22 @@
 							<tr><td><div class="w-100perc h-100perc"><button class="w-100perc h-100perc dmg-op-button" onclick="changeCounter('-', 'active_0')">-</button></td></tr>
 						</table>
 					</td>
-					<td class="w-20perc"><div class="w-100perc h-100perc"><button id="paralyzed_b" class="w-100perc h-100perc status-button" onclick="showStatusButton('paralyzed_b')">Paralyzed</button></div></td>
+					<td class="w-20perc"><div class="w-100perc h-100perc"><button id="paralyzed_b" class="w-100perc h-100perc status-button" onclick="showStatusButton('paralyzed_b')">Paralizado</button></div></td>
 					<td rowspan="3" class="w-20perc"></td>
 				</tr>
 				<tr>
-					<td><div class="w-100perc h-100perc"><button id="burned_b" class="w-100perc h-100perc status-button" onclick="showStatusButton('burned_b')">Burned</button></div></td>
-					<td><div class="w-100perc h-100perc"><button id="poisoned_b" class="w-100perc h-100perc status-button" onclick="showStatusButton('poisoned_b')">Poisoned</button></div></td>
+					<td><div class="w-100perc h-100perc"><button id="burned_b" class="w-100perc h-100perc status-button" onclick="showStatusButton('burned_b')">Quemado</button></div></td>
+					<td><div class="w-100perc h-100perc"><button id="poisoned_b" class="w-100perc h-100perc status-button" onclick="showStatusButton('poisoned_b')">Envenenado</button></div></td>
 				</tr>
 				<tr>
-					<td><div class="w-100perc h-100perc"><button id="confused_b" class="w-100perc h-100perc status-button" onclick="showStatusButton('confused_b')">Confused</button></div></td>
-					<td><div class="w-100perc h-100perc"><button id="retreat_b" class="w-100perc h-100perc status-button" onclick="showSelectButton()">Retreat</button></div></td>
+					<td><div class="w-100perc h-100perc"><button id="confused_b" class="w-100perc h-100perc status-button" onclick="showStatusButton('confused_b')">Confundido</button></div></td>
+					<td><div class="w-100perc h-100perc"><button id="retreat_b" class="w-100perc h-100perc status-button" onclick="showSelectButton()">Retirar</button></div></td>
 				</tr>
 			</table>
 		</div>
 
 		<div id="bench-p" style="overflow-x: auto;">
-			<p class="t-center t-blue-2 t-bold t-large">Bench</p>
+			<p class="t-center t-blue-2 t-bold t-large">Banca</p>
 			<table border="0" class="w-100perc tb-center">
 				<tr>
 					<td class="counter t-center w-20perc">
@@ -231,15 +235,15 @@
 				"domain": "/",
 				"secure": true,
 				"content": {
-				"header": 'Cookies used on the website!',
-				"message": 'This website uses cookies to improve your experience.',
-				"dismiss": 'Got it!',
-				"allow": 'Allow cookies',
-				"deny": 'Decline',
-				"link": 'Learn more',
+				"header": '¡Cookies usadas en la web!',
+				"message": 'Esta web usa cookies para mejorar tu experiencia.',
+				"dismiss": 'Acepto',
+				"allow": 'Permitir cookies',
+				"deny": 'Rechazar',
+				"link": 'Leer más',
 				"href": 'https://www.cookiesandyou.com',
 				"close": '&#x274c;',
-				"policy": 'Cookie Policy',
+				"policy": 'Política de cookies',
 				"target": '_blank',
 				}
 			});
@@ -376,6 +380,20 @@
 				document.getElementById("active_0").textContent = bench_val;
 				document.getElementById(bench_id).textContent = active_val;
 
+				setCookie("active_0", bench_val, 365);
+				setCookie(bench_id, active_val, 365);
+
+				activeAsleep = false;
+				showStatusButton("asleep_b");
+				activeBurned = false;
+				showStatusButton("burned_b");
+				activeConfused = false;
+				showStatusButton("confused_b");
+				activeParalyzed = false;
+				showStatusButton("paralyzed_b");
+				activePoisoned = false;
+				showStatusButton("poisoned_b");
+
 				showSelectButton();
 			}
 
@@ -410,6 +428,12 @@
 				var bench_3 = getCookie("bench_3");
 				var bench_4 = getCookie("bench_4");
 
+				var activeAsleep_c = getCookie("asleep_b");
+				var activeBurned_c = getCookie("burned_b");
+				var activeConfused_c = getCookie("confused_b");
+				var activeParalyzed_c = getCookie("paralyzed_b");
+				var activePoisoned_c = getCookie("poisoned_b");
+
 				if (active_0 != "" && bench_0 != "" && bench_1 != "" && bench_2 != "" && bench_3 != "" && bench_4 != "") {
 					document.getElementById('active_0').textContent = active_0;
 					document.getElementById('bench_0').textContent = bench_0;
@@ -417,6 +441,28 @@
 					document.getElementById('bench_2').textContent = bench_2;
 					document.getElementById('bench_3').textContent = bench_3;
 					document.getElementById('bench_4').textContent = bench_4;
+
+					if (activeAsleep_c == "yes") {
+						activeAsleep = true;
+						showStatusButton("asleep_b");
+					}
+					if (activeBurned_c == "yes") {
+						activeBurned = true;
+						showStatusButton("burned_b");
+					}
+					if (activeConfused_c == "yes") {
+						activeConfused = true;
+						showStatusButton("confused_b");
+					}
+					if (activeParalyzed_c == "yes") {
+						activeParalyzed = true;
+						showStatusButton("paralyzed_b");
+					}
+					if (activePoisoned_c == "yes") {
+						activePoisoned = true;
+						showStatusButton("poisoned_b");
+					}
+
 				}
 				else {
 					setCookie("active_0", "0", 365);
@@ -425,16 +471,46 @@
 					setCookie("bench_2", "0", 365);
 					setCookie("bench_3", "0", 365);
 					setCookie("bench_4", "0", 365);
+
+					setCookie("asleep_b", "no", 365);
+					setCookie("burned_b", "no", 365);
+					setCookie("confused_b", "no", 365);
+					setCookie("paralyzed_b", "no", 365);
+					setCookie("poisoned_b", "no", 365);
 				}
 			}
 
 			function resetCookies() {
+				document.getElementById('active_0').textContent = 0;
+				document.getElementById('bench_0').textContent = 0;
+				document.getElementById('bench_1').textContent = 0;
+				document.getElementById('bench_2').textContent = 0;
+				document.getElementById('bench_3').textContent = 0;
+				document.getElementById('bench_4').textContent = 0;				
+
+				activeAsleep = false;
+				showStatusButton("asleep_b");
+				activeBurned = false;
+				showStatusButton("burned_b");
+				activeConfused = false;
+				showStatusButton("confused_b");
+				activeParalyzed = false;
+				showStatusButton("paralyzed_b");
+				activePoisoned = false;
+				showStatusButton("poisoned_b");
+				
 				setCookie("active_0", "0", 0);
 				setCookie("bench_0", "0", 0);
 				setCookie("bench_1", "0", 0);
 				setCookie("bench_2", "0", 0);
 				setCookie("bench_3", "0", 0);
-				setCookie("bench_4", "0", 0);				
+				setCookie("bench_4", "0", 0);
+
+				setCookie("asleep_b", "no", 0);
+				setCookie("burned_b", "no", 0);
+				setCookie("confused_b", "no", 0);
+				setCookie("paralyzed_b", "no", 0);
+				setCookie("poisoned_b", "no", 0);			
 			}
 		</script>
 	</body>
